@@ -42,11 +42,10 @@ public class FakeCityRegisterChecker implements CityRegisterChecker {
                 TransportException ex = new TransportException("Transport ERROR");
                 throw ex;
             }
-            if (person instanceof Child) {
-                res.setExisting(true);
-                res.setTemporal(true);
-            }
-
+        }
+        if (person instanceof Child) {
+            res.setExisting(true);
+            res.setTemporal(true);
         }
         System.out.println(res);
         return res;
